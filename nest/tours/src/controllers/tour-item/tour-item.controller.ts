@@ -18,7 +18,7 @@ export class TourItemController {
             destination: './public',
             filename: (req, file, cb) =>{
                 const imgType = file.mimetype.split('/')
-                const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+                const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E8);
                 const imgName = file.fieldname + '-' + uniqueSuffix + '.' + imgType[1]
 
                 cb(null, imgName);
